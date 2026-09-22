@@ -9,6 +9,7 @@ from ..backend.clients.chroma.cli import Chroma
 from ..backend.clients.clickhouse.cli import Clickhouse
 from ..backend.clients.cockroachdb.cli import CockroachDB as CockroachDBCli
 from ..backend.clients.doris.cli import Doris
+from ..backend.clients.edb_vectorplus.cli import EdbVectorplusIVFPlus
 from ..backend.clients.elastic_cloud.cli import (
     ElasticCloudHNSW,
     ElasticCloudHNSWBBQ,
@@ -73,6 +74,7 @@ cli.add_command(MilvusFTS)
 cli.add_command(AWSOpenSearch)
 cli.add_command(OSSOpenSearch)
 cli.add_command(PgVectorScaleDiskAnn)
+cli.add_command(EdbVectorplusIVFPlus)
 cli.add_command(PgDiskAnn)
 cli.add_command(AlloyDBScaNN)
 cli.add_command(LakebaseANN)

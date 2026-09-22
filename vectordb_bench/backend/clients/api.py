@@ -42,6 +42,7 @@ class IndexType(StrEnum):
     ES_HNSW_BBQ = "bbq_hnsw"
     TES_VSEARCH = "vsearch"
     ES_IVFFlat = "ivfflat"
+    IVFPLUS = "ivfplus"
     GPU_IVF_FLAT = "GPU_IVF_FLAT"
     GPU_BRUTE_FORCE = "GPU_BRUTE_FORCE"
     GPU_IVF_PQ = "GPU_IVF_PQ"
