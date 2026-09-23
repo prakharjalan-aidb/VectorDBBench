@@ -9,6 +9,7 @@ from ..backend.clients.chroma.cli import Chroma
 from ..backend.clients.clickhouse.cli import Clickhouse
 from ..backend.clients.cockroachdb.cli import CockroachDB as CockroachDBCli
 from ..backend.clients.doris.cli import Doris
+from ..backend.clients.edb_vectorplus.cli import EdbVectorplusIVFPlus
 from ..backend.clients.elastic_cloud.cli import (
     ElasticCloudHNSW,
     ElasticCloudHNSWBBQ,
@@ -27,7 +28,7 @@ from ..backend.clients.lancedb.cli import (
 from ..backend.clients.lindorm.cli import LindormHNSW, LindormIVFBQ, LindormIVFPQ
 from ..backend.clients.mariadb.cli import MariaDBHNSW
 from ..backend.clients.memorydb.cli import MemoryDB
-from ..backend.clients.milvus.cli import MilvusAutoIndex, MilvusFTS
+from ..backend.clients.milvus.cli import MilvusAutoIndex, MilvusFTS, MilvusHNSWSQ, MilvusIVFFlat
 from ..backend.clients.oceanbase.cli import OceanBaseHNSW, OceanBaseIVF
 from ..backend.clients.oss_opensearch.cli import OSSOpenSearch
 from ..backend.clients.pgdiskann.cli import PgDiskAnn
@@ -70,9 +71,12 @@ cli.add_command(Test)
 cli.add_command(ZillizAutoIndex)
 cli.add_command(MilvusAutoIndex)
 cli.add_command(MilvusFTS)
+cli.add_command(MilvusIVFFlat)
+cli.add_command(MilvusHNSWSQ)
 cli.add_command(AWSOpenSearch)
 cli.add_command(OSSOpenSearch)
 cli.add_command(PgVectorScaleDiskAnn)
+cli.add_command(EdbVectorplusIVFPlus)
 cli.add_command(PgDiskAnn)
 cli.add_command(AlloyDBScaNN)
 cli.add_command(LakebaseANN)
